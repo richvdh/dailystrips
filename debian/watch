@@ -1,0 +1,8 @@
+version=3
+
+# watch control file for mapivi
+# This is obviously a bit of a lie, but there's a 1.1.0 version in there
+# that is old.  If upstream ever revives and decides to bump the version to
+# 1.1.x or 1.2.x or anything, then this will require manual action to
+# notice.
+http://sf.net/dailystrips/dailystrips-(1\.0\..*)\.tar\.gz

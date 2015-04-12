@@ -1,0 +1,47 @@
+# Danish translation dailystrips.
+# Copyright (C) dailystrips & nedenstående oversættere.
+# This file is distributed under the same license as the dailystrips package.
+# Joe Hansen (joedalton2@yahoo.dk), 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dailystrips\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-12 20:00+0200\n"
+"PO-Revision-Date: 2011-05-28 18:30+01:00\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Language-Team: Danish <debian-l10n-danish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Definitions in /etc/dailystrips.defs override packaged definitions"
+msgstr "Definitioner i /etc/dailystrips.defs overskriver pakkede definitioner"
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid ""
+"You have an /etc/dailystrips.defs file installed.  Be warned that entries in "
+"there will override those in the packaged strips.def file, so if you created "
+"that file because it was more up-to-date than the packaged entry, it would "
+"be a good idea to check it against the packaged one (in /usr/share/"
+"dailystrips/strips.defs) and remove the one in /etc now (assuming that the "
+"new one contains the same fixes yours does)."
+msgstr ""
+"Du har en fil af typen /etc/dailystrips-defs installeret. Vær opmærksom på "
+"at punkter i denne vil overskrive dem i den pakkede fil strips.def, så hvis "
+"du oprettede den fil, fordi den var mere opdateret end det pakkede punkt, vil "
+"det være en god ide at tjekke den mod den pakkede (i /usr/share/dailystrips/"
+"strips.defs) og nu fjerne den i /etc (under den antagelse at den nye "
+"indeholder de samme rettelser som din indeholder)."
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Check the README.debian for more details."
+msgstr "Læs README.debian for yderligere detaljer."
+

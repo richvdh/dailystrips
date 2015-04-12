@@ -1,0 +1,55 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dailystrips 1.0.28-3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-12 20:00+0200\n"
+"PO-Revision-Date: 2004-09-03 10:02+0900\n"
+"Last-Translator: Hideki Yamane <henrich@samba.gr.jp>\n"
+"Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=EUC-JP\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Definitions in /etc/dailystrips.defs override packaged definitions"
+msgstr "/etc/dailystrips.defs での定義はパッケージの定義を上書きします"
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid ""
+"You have an /etc/dailystrips.defs file installed.  Be warned that entries in "
+"there will override those in the packaged strips.def file, so if you created "
+"that file because it was more up-to-date than the packaged entry, it would "
+"be a good idea to check it against the packaged one (in /usr/share/"
+"dailystrips/strips.defs) and remove the one in /etc now (assuming that the "
+"new one contains the same fixes yours does)."
+msgstr ""
+"/etc/dailystrips.defs ファイルがインストールされています。ここに記載されてい"
+"る内容はパッケージの strips.def ファイルを上書きするので注意してください。"
+"パッケージ化された内容よりもより最新に近くするためにこのファイルを作成してい"
+"た場合、パッケージのもの (in /usr/share/dailystrips/strips.defs) と比較し、"
+"(新しいもののほうが、自身の修正したのと同じものを含んでいると仮定した場合) /"
+"etc の方をすぐに削除するのが良い考えでしょう。"
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Check the README.debian for more details."
+msgstr "詳細は README.debian を確認してください。"

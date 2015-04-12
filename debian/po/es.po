@@ -1,0 +1,71 @@
+# dailystrips po-debconf translation to Spanish
+# Copyright (C) 2005 Software in the Public Interest
+# This file is distributed under the same license as the dailystrips package.
+#
+# Changes:
+#  - Initial translation
+#         César Gómez Martín <cesar.gomez@gmail.com>
+#
+#   Traductores, si no conoce el formato PO, merece la pena leer la
+#   documentación de gettext, especialmente las secciones dedicadas a este
+#   formato, por ejemplo ejecutando:
+#          info -n '(gettext)PO Files'
+#          info -n '(gettext)Header Entry'
+# Equipo de traducción al español, por favor, lean antes de traducir
+# los siguientes documentos:
+#
+#  - El proyecto de traducción de Debian al español
+#    http://www.debian.org/intl/spanish/
+#    especialmente las notas de traducción en
+#    http://www.debian.org/intl/spanish/notas
+#
+#  - La guía de traducción de po's de debconf:
+#    /usr/share/doc/po-debconf/README-trans
+#    o http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dailystrips\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-12 20:00+0200\n"
+"PO-Revision-Date: 2005-09-14 16:42+0100\n"
+"Last-Translator: César Gómez Martín <cesar.gomez@gmail.com>\n"
+"Language-Team: Debian l10n spanish <debian-l10n-spanish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Definitions in /etc/dailystrips.defs override packaged definitions"
+msgstr ""
+"Las definiciones de /etc/dailystrips.defs anulan las definiciones "
+"empaquetadas."
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid ""
+"You have an /etc/dailystrips.defs file installed.  Be warned that entries in "
+"there will override those in the packaged strips.def file, so if you created "
+"that file because it was more up-to-date than the packaged entry, it would "
+"be a good idea to check it against the packaged one (in /usr/share/"
+"dailystrips/strips.defs) and remove the one in /etc now (assuming that the "
+"new one contains the same fixes yours does)."
+msgstr ""
+"Tiene un fichero /etc/dailystrips.defs instalado. Tenga en cuenta que las "
+"entradas de ese fichero anularán las entradas empaquetas en el fichero "
+"strips.def, por lo que, si creó ese fichero porque era más actual que el "
+"empaquetado, sería una buena idea compararlo de nuevo con el empaquetado "
+"(usr/share/dailystrips/strips.defs) y eliminar el que está ahora en /etc "
+"(asumiendo que el nuevo contiene los mismos arreglos que el suyo)."
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Check the README.debian for more details."
+msgstr "Consulte el fichero README.debian para más información."

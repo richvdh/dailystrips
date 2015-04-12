@@ -1,0 +1,46 @@
+# Portuguese translation of dailystrips.
+# This file is distributed under the same license as the dailystrips package.
+# Ricardo Silva <ardoric@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dailystrips 1.0.28-4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-12 20:00+0200\n"
+"PO-Revision-Date: 2006-09-21 23:29+0100\n"
+"Last-Translator: Ricardo Silva <ardoric@gmail.com>\n"
+"Language-Team: Portuguese <traduz@debianpt.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Definitions in /etc/dailystrips.defs override packaged definitions"
+msgstr ""
+"Definições em /etc/dailystrips.defs sobrepõem-se às definições do pacote"
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid ""
+"You have an /etc/dailystrips.defs file installed.  Be warned that entries in "
+"there will override those in the packaged strips.def file, so if you created "
+"that file because it was more up-to-date than the packaged entry, it would "
+"be a good idea to check it against the packaged one (in /usr/share/"
+"dailystrips/strips.defs) and remove the one in /etc now (assuming that the "
+"new one contains the same fixes yours does)."
+msgstr ""
+"Existe um ficheiro /etc/dailystrips.def instalado. Fica avisado que as "
+"entradas nele irão sobrepor-se àquelas no ficheiro strips.def do pacote, "
+"portanto se criou o ficheiro por estar mais actualizado que o do pacote, "
+"talvez seja uma boa ideia compará-lo com o do pacote (em /usr/share/"
+"dailystrips/strips.def) e remover o que está em /etc (assumindo que o novo "
+"contém os mesmos reparos que o seu)."
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Check the README.debian for more details."
+msgstr "Leia o ficheiro README.debian para mais detalhes."
