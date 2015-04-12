@@ -1,0 +1,242 @@
+dailystrips (1.0.28-11) unstable; urgency=low
+
+  * Added Danish po-debconf translation (closes: #628230)
+  * Added Abtruse Goose definition (closes: #585529)
+  * Added ucomics-gen-sun-jpg class (closes: #629301)
+
+ -- Rene Weber <rene_debmaint@public.e-mail.elvenlord.com>  Mon, 25 Jul 2011 11:42:29 +0200
+
+dailystrips (1.0.28-10) unstable; urgency=low
+
+  * Neutered dailystrips-update and updated documentation.  As
+    dailystrips-update will be removed from a future version of this
+    package, anyone who has it invoked automatically (e.g., through a cron
+    job) should remove that now.  Closes: #553308
+  * Added Saturday Morning Breakfast Cereal (smbc).  Closes: #535831
+  * Changed Dorktower definition.  Closes: #540537
+
+ -- Rene Weber <rene_debmaint@public.e-mail.elvenlord.com>  Sat, 07 Nov 2009 18:13:36 +0100
+
+dailystrips (1.0.28-9) unstable; urgency=low
+
+  * Fix for comics apparently migrated to gocomics from ucomics over the
+    past few days (using a new class definition gocomics-srch):
+    calvinandhobbes, tomthedancingbug, thefifthwave, bensargent,
+    patoliphant.
+  * Cleanup of strips.def, thanks to suggestions by Sebastian Rasmussen.
+    This affects the following strips: sinfest, theweedpatch, bruno, angst,
+    crfh, adventurers, fuzzylogic, mrchuckshow, pentasmal, elflifeadult,
+    funnyfarm, elflife, wandering, cutewendy, bigones, brainbuzz, swamp,
+    thenorm, melonpool, weakendwarriors, nekobox, stockcartoons, thatsjake,
+    agnes, archie, askshagg, ballardstreet, bachelorparty, charlie,
+    flightdeck, flofriends, forheavenssake, heathcliff, herbandjamaal,
+    libertymeadows, momma, mrhousewife, jimmymargulies, queenofwands,
+    nothingnice, instantclassic, halge, elvis, pondus, thismodernworld,
+    apartment3g, babsandaldo, kernelpanic, statsministeren, antiherohire,
+    kaerwyn, vgcats, suburbanjungle, wulffmorgenthaler, orderofthestick,
+    gucomics, bunny, blacktapsdonate, drfun, fans, machall.  Some have been
+    retired, some modified, and some brought back from the dead.  I have
+    only verified that for a trivial run, the existing strips that work on
+    the day that I tested are still working.  Closes: #508638
+  * Added link to the dailystrips homepage (though it seems to be abandoned
+    by upstream) to debian/control.
+
+ -- Rene Weber <rene_debmaint@public.e-mail.elvenlord.com>  Sun, 15 Mar 2009 19:38:15 +0100
+
+dailystrips (1.0.28-8) unstable; urgency=low
+
+  * Permit any non-whitespace characters in strip definitions (necessary for
+    the new definitions.)
+  * Fixes for Unitedmedia strips, will cause breakage for people using strips
+    that have been renamed/are missing -- dailystrips will issue warnings and
+    errors in this case.  Closes: #504999, #504574
+  * Above fixes resulted in renames for many comics, including those that used
+    to be called: alleyoop, arlonjanis, bignate, bornloser, buckets, chickweed,
+    franknernest, geech, getfuzzy, grandave, grizzwells, hedge, janesworld,
+    jumpstart, kitncarlyle, raisingduncan, reality, ripleys, roseisrose,
+    shirleynson, soup2nutz, tarzan, workingdaze.
+  * A number of old Unitemedia strips seem to be gone.  If you care about them
+    and find them elsewhere, patches are accepted.  These include:
+    bullsnbears, gingermeggs, lupo, meatloaf, pibgorn, potluck, stockcartoons.
+  * Some new strips thanks to Friedrich Delgado Friedrichs.  This fixes
+    sexylosers, perscheid, clanofthecats, btaf, touche, haiopeis, and adds
+    orderofthestick, sharingauniverse, girlgenius, afterlifeblues,
+    gruftschlampe, promis, taztouche.  Closes: #504633
+  * New definitions for sexylosers, btaf, and orderofthestick (new strip)
+    require that curl be installed, and mean that those URLs will be fetched
+    on every invocation of dailystrips (whether you are using them or not).
+    Thus, these entries are commented in the strips.def for you to uncomment
+    or put in your personal ~/.dailystrips.defs file.
+  * Hagar appears to be working (again?).  Closes: #265450
+
+ -- Rene Weber <rene_debmaint@public.e-mail.elvenlord.com>  Mon, 01 Dec 2008 09:18:04 +0100
+
+dailystrips (1.0.28-7) unstable; urgency=low
+
+  * New strips and fixes for "creators" strips thanks to Sebastian Rasmussen.
+    Closes: #444774
+  * Closing previously fixed (in documentation) bug for dailystrips-update.
+    Closes: #437814
+  * More new strips and fixes thanks to Sebastian Rasmussen.
+  * More new strips and fixes thanks to Hubert Chathi.  Closes: #453492
+
+ -- Rene Weber <rene_debmaint@public.e-mail.elvenlord.com>  Mon, 10 Dec 2007 08:51:53 +0100
+
+dailystrips (1.0.28-6) unstable; urgency=low
+
+  * Support for https URLs.  Closes: #437812
+  * Fix for drfun.  Closes: #437818
+  * Fix for sluggy.  Closes: #437820
+  * Fix for phdcomics.  Closes: #437915
+  * New strip xkcd.  Closes: #437910
+
+ -- Rene Weber <rene_debmaint@public.e-mail.elvenlord.com>  Wed, 15 Aug 2007 20:13:56 +0200
+
+dailystrips (1.0.28-5) unstable; urgency=low
+
+  * Fix nostale option.  Closes: #338761
+  * Maintainer upload, ack NMU's, many thanks to Christian Perrier for taking
+    care of the debconf translations while I was unable to update.  Closes:
+    #313498, #291870, #331332, #389501, #336034
+  * Replaced strips.def with version 1.203 from CVS (the latest version,
+    from February 2005) and incorporated fixes for a few strips contributed
+    by Emmanuel Fleury.  Closes: #328257
+
+ -- Rene Weber <rene_debmaint@public.e-mail.elvenlord.com>  Fri, 20 Jul 2007 04:17:50 +0200
+
+dailystrips (1.0.28-4.1) unstable; urgency=low
+
+  * Non-maintainer upload to fix longstanding l10n issues, with
+    maintainer's agreement
+  * Depend on "debconf | debconf-2.0" to ease the cdebconf transition
+    Closes: #331789
+  * Turn the debconf template to an error template. Closes: #388881
+  * Debconf translations
+    - Added Vietnamese. Closes: #313498
+    - Added Czech. Closes: #291870
+    - Added Swedish. Closes: #331332
+    - Added Portuguese. Closes: #389501
+    - Added Spanish. Closes: #336034
+    - Added Romanian. Sent during the call for updates for the NMU
+    - Added Brazilian Portuguese. Sent during the call for updates for the NMU
+    - Added Russian. Sent during the call for updates for the NMU
+  * Lintian fixes:
+    - use debhelper compatibility level 4
+    - move debhelper form Build-Depends-Indep to Duild-Depends
+    - move Standards to 3.7.2 (checked)
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 11 Oct 2006 20:56:56 +0200
+
+dailystrips (1.0.28-4) unstable; urgency=low
+
+  * The long-delayed-upload upload.
+  * Added Japanese po-debconf translation (closes: #270929)
+  * Added German po-debconf translation (closes: #251947)
+  * Added Dutch po-debconf translation (closes: #247083)
+  * Fixed rules to better reflect the fact that this is an arch: any package.
+  * Replaced strips.def with the latest version from CVS (many updated strips)
+    which is 10 months old at this point.
+  * Fixed strips definition for Sev Trek (and entire Sev class).  Seems to
+    work, but has not been not well tested yet (OTOH, the old method is
+    definitely broken, so this is better than it was) (closes: #245373)
+  * Fixed strips definition for Bob, The Angry Flower.
+  * Fixed minus/hyphen problems in dailystrips-clean and dailystrips-update
+    man pages.
+
+ -- Rene Weber <rene_debmaint@public.e-mail.elvenlord.com>  Sat,  4 Dec 2004 23:24:03 -0500
+
+dailystrips (1.0.28-3) unstable; urgency=low
+
+  * Take the package back from Tollef with his approval.
+  * Install dailystrips-update script to update definitions.
+  * Created a man page for dailystrips-update.
+  * Corrected typo in dailystrips-clean (and its man page).
+  * Install new README files for -update and -clean.
+  * Many thanks to Tollef for taking care of this package in my absence.
+
+ -- Rene Weber <rene_debmaint@public.e-mail.elvenlord.com>  Fri, 25 Jun 2004 21:18:13 -0400
+
+dailystrips (1.0.28-2) unstable; urgency=low
+
+  * Doh.  Really adopt package this time.
+  * Ack NMU.  (closes: #244452, #144057, #153048, #158187, #158429)
+    (closes: #135163, #158883, #186002, #207385, #207606)
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Wed, 21 Apr 2004 20:35:18 +0200
+
+dailystrips (1.0.28-1) unstable; urgency=low
+
+  * Adopt package.  (Closes: #244452)
+  * Remove local variables from changelog, as they are obsolete.
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Wed, 21 Apr 2004 15:36:17 +0200
+
+dailystrips (1.0.28-0.1) unstable; urgency=low
+
+  * NMU
+  * New upstream release (closes: #158187, #186002)
+    - Removed badtech from strips.def (closes: #144057)
+    - Bugfix for little gamers (closes: #135163)
+    - Fixed comicspage.com (closes: #153048)
+  * Fix typo in man page and clearify README.LOCAL (closes: #158883)
+  * Rebuild fixes perl 5.6 vs 5.8 problem (closes: #158429)
+  * Use po-debconf (closes: #207385)
+  * Add French debconf templates (closes: #207606)
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Fri,  9 Apr 2004 14:31:15 +0200
+
+dailystrips (1.0.23-1) unstable; urgency=medium
+
+  * New upstream release (note: supplied by upstream slightly in advance of
+    the actual release)
+  * Modified upstream code to explicitly include 5.005 libraries to
+    accomodate people with older versions of modules installed (since
+    perl-5.6.1-7 removed that entry in @INC).  This hack will be removed
+    post-woody.  (Closes: #143711, #143805)
+  * Modified upstream code to specify "perl -S" when calling
+    dailystrips-clean.  (Closes: #143804)
+  * Urgency medium because #143711 is vaguely a dependency bug and
+    dependencies are an important bug so I'd like this to get some "testing"
+    testing before we release.
+
+ -- Rene Weber <rene_debmaint@elvenlord.com>  Sat, 20 Apr 2002 13:19:19 -0400
+
+dailystrips (1.0.22-2) unstable; urgency=low
+
+  * Argh, quick re-upload to fix maintainer address.
+
+ -- Rene Weber <rene_debmaint@elvenlord.com>  Wed, 27 Feb 2002 17:09:01 -0500
+
+dailystrips (1.0.22-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Rene Weber <rene_debmaint@elvenlord.com>  Fri, 22 Feb 2002 18:14:56 -0500
+
+dailystrips (1.0.21-1) unstable; urgency=low
+
+  * New upstream release
+  * Applied fix for problem when using --stripdir and --nospaces together
+    (Closes: #128716)
+
+ -- Rene Weber <rene_debmaint@elvenlord.com>  Sun, 13 Jan 2002 18:36:54 -0500
+
+dailystrips (1.0.20-1) unstable; urgency=low
+
+  * New upstream release
+  * Fixed Build-Depends problem (changed to Build-Depends-Indep).
+
+ -- Rene Weber <rene_debmaint@elvenlord.com>  Sun, 28 Oct 2001 15:44:52 -0500
+
+dailystrips (1.0.18-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #105243)
+  * Modifications from source are minimal (my proposed changes made it into
+    upstream), ignored install.pl and used plain /usr/bin/install instead,
+    corrected an apparent editing mistake in dailystrips.pl, and installed
+    binary as "dailystrips" instead of "dailystrips.pl".
+  * Wrote a simple manpage.
+
+ -- Rene Weber <rene_debmaint@elvenlord.com>  Thu, 13 Sep 2001 22:48:09 -0400
+
+

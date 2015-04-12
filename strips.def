@@ -5128,7 +5128,8 @@ strip xkcd
     homepage http://www.xkcd.com/
     artist Randall Munroe
     type search
-    searchpattern <img.+?src="(http://imgs\.xkcd\.com/comics/\S+\.(png|jpg))"
+    searchpattern <img.+?src="((http:)?//imgs\.xkcd\.com/comics/\S+\.(png|jpg))" title="(.+?)"
+    titlematchpart 4
     searchpage $homepage
     provides latest
 end
@@ -5234,7 +5235,8 @@ strip abstrusegoose
     artist lcfr
     homepage http://abstrusegoose.com/
     type search
-    searchpattern <img.+?src="(http://\S+/strips/\S+\.png)"
+    searchpattern <img.+?src="(http://\S+/strips/\S+\.png)" [^>]*? title="(.+?)"
+    titlematchpart 2
     searchpage $homepage
     provides latest
 end
@@ -5302,7 +5304,8 @@ strip dinosaur
 	artist Ryan North
 	homepage http://www.qwantz.com/index.php
 	type search
-	searchpattern <img.+?src="(\S*/comics/comic\d*-\d+\..{3})"
+	searchpattern <img.+?src="(\S*/comics/comic\d*-\d+\..{3})" [^>]*? title="(.+?)"
+        titlematchpart 2
 	provides latest
 end
 

@@ -1,0 +1,48 @@
+# Vietnamese translation for dailystrips.
+# Copyright © 2005 Free Software Foundation, Inc.
+# Clytie Siddall <clytie@riverland.net.au>, 2005.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: dailystrips 1.0.28-4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-12 20:00+0200\n"
+"PO-Revision-Date: 2005-06-14 13:08+0930\n"
+"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
+"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Definitions in /etc/dailystrips.defs override packaged definitions"
+msgstr ""
+"Những lời định nghĩa trong tập tin «/etc/dailystrips.defs» có đè các lời "
+"định nghĩa đã đóng gói."
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid ""
+"You have an /etc/dailystrips.defs file installed.  Be warned that entries in "
+"there will override those in the packaged strips.def file, so if you created "
+"that file because it was more up-to-date than the packaged entry, it would "
+"be a good idea to check it against the packaged one (in /usr/share/"
+"dailystrips/strips.defs) and remove the one in /etc now (assuming that the "
+"new one contains the same fixes yours does)."
+msgstr ""
+"Trong hệ thống bạn, đã cài đặt một tập tin «/etc/dailystrips.defs» rồi. Như "
+"thế thì, những mục nhập trong tập tin ấy sẽ đè các điều trong tập tin cùng "
+"tên thuộc về gói tin này. Nếu bạn đã tạo tập tin trong hệ thống này vì nó "
+"mới hơn điều của gói tin, bạn hãy so sánh nó với điều ấy (trong «/usr/share/"
+"dailystrips/strips.defs») và xóa bỏ điều hiện có trong «/etc» (nếu tập tin "
+"mới chứa cùng mọi cách sửa với tập tin bạn)."
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Check the README.debian for more details."
+msgstr "Hãy xem tập tin «README.debian» để tìm chi tiết."

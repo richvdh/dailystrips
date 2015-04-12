@@ -1,0 +1,49 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-12 20:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Definitions in /etc/dailystrips.defs override packaged definitions"
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid ""
+"You have an /etc/dailystrips.defs file installed.  Be warned that entries in "
+"there will override those in the packaged strips.def file, so if you created "
+"that file because it was more up-to-date than the packaged entry, it would "
+"be a good idea to check it against the packaged one (in /usr/share/"
+"dailystrips/strips.defs) and remove the one in /etc now (assuming that the "
+"new one contains the same fixes yours does)."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../templates:1001
+msgid "Check the README.debian for more details."
+msgstr ""

@@ -1,0 +1,16 @@
+Source: dailystrips
+Section: net
+Priority: optional
+Maintainer: Rene Weber <rene_debmaint@public.e-mail.elvenlord.com>
+Build-Depends: debhelper (>= 5.0.53)
+Standards-Version: 3.9.2.0
+
+Package: dailystrips
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}, libwww-perl, libtimedate-perl, debconf | debconf-2.0
+Homepage: http://dailystrips.sourceforge.net/
+Description: view web comic strips more conveniently
+ A perl script that gathers online comic strips for more convenient viewing.
+ When in normal mode, it creates an HTML page that references the strips
+ directly, and when in local mode, it also downloads the images to your local
+ disk.

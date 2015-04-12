@@ -1,0 +1,11 @@
+Template: dailystrips/warning-etcdefs
+Type: error
+_Description: Definitions in /etc/dailystrips.defs override packaged definitions
+ You have an /etc/dailystrips.defs file installed.  Be warned that entries
+ in there will override those in the packaged strips.def file, so if you
+ created that file because it was more up-to-date than the packaged entry,
+ it would be a good idea to check it against the packaged one (in
+ /usr/share/dailystrips/strips.defs) and remove the one in /etc now
+ (assuming that the new one contains the same fixes yours does).
+ .
+ Check the README.debian for more details.

@@ -1,0 +1,36 @@
+dailystrips for Debian
+----------------------
+
+    Due to the high volatility of the strip information stored in
+</usr/share/dailystrips/strips.def>, this package may be often out of date,
+especially in Debian's "stable" release.
+
+    WARNING: As upstream development seems to have ceased, use of
+"dailystrips-update" is no longer recommended.  As such, it has been
+neutered, and will be removed in a future release of this package.  Please
+remove it from any automated jobs.
+
+    You may override any definitions by creating /etc/dailystrips.defs for
+system-wide upgrades or .dailystrips.defs in your home directory.
+
+    Be warned that if you create an /etc/dailystrips.defs, your file in /etc
+trumps the system one in /usr/share/dailystrips/strips.def, which means that
+when you upgrade to a newer version of dailystrips you will probably want to
+delete or merge your definitions in /etc.  I can't really handle this
+gracefully in the maintainer scripts since your file in /etc may have extra
+definitions that the packaged one doesn't (or you may have deliberately
+broken some strips, for example), so since you put it there manually, it is
+your responsibility to remove it if the newer one supplied with the package
+is better.  A good strategy to reduce the chance that you will be bitten by
+this is to only put the definitions that you need to override in the
+/etc/dailystrips.defs file so that at least the others will be properly
+updated.
+
+    (Another option is for you to silently replace the packaged version of
+strips.def in /usr/share/dailystrips, since that will [presumably -- I
+haven't tested this] just be replaced on an upgrade.  This *will* break
+md5sum checks of that file against the packaged one though [for example,
+using debsums], so it's probably not a good idea, unless you don't mind
+that.)
+
+ -- Rene Weber <rene_debmaint@public.e-mail.elvenlord.com>, Thu, 05 Nov 2009 19:40:10 +0100

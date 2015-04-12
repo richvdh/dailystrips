@@ -1,0 +1,54 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH DAILYSTRIPS-CLEAN "1" "June 25, 2004"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+dailystrips-clean \- remove old downloaded dailystrips
+.SH SYNOPSIS
+.B dailystrips-clean
+[\fIOPTIONS\fR] \fIDAYS\fR
+.SH DESCRIPTION
+This utility by default removes all comic strips downloaded by
+.BR dailystrips
+in the current directory that are older than a specified number of days.
+.SH OPTIONS
+.TP
+.B \-q, \-\-quiet
+Turn off progress messages         
+.TP
+.B \-v, \-\-verbose
+Turn on extra progress information, overrides \-q
+.TP
+.B \-t, \-\-test
+Do not actually remove files
+.TP
+.B \-d, \-\-dir DIR
+Work in specified directory instead of current directory
+.TP
+.B \-a  \-\-archive
+Update archive.html file
+.TP
+.B \-V, \-\-version
+Print version number
+.TP
+.B \-h, \-\-help
+Show summary of options
+.SH "SEE ALSO"
+.BR dailystrips (1)
+.SH AUTHOR
+This manual page was written by Rene Weber
+<rene_debmaint@public.e-mail.elvenlord.com>, for the Debian GNU/Linux system
+(but may be used by others).

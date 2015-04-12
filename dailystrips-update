@@ -11,6 +11,9 @@
 # Current Revision: 1.0.0
 #
 
+# "dailystrips-update" is deprecated as upstream is dead, it will be removed
+# in a future release.
+exit(0);
 
 # Set up
 use strict;

@@ -20,7 +20,7 @@ Create a directory (such as /home/user/dailystrips/) in which to store
 the downloaded images and output files.
 
 Create a cron script like the following and put it in  /etc/cron.daily
-(call it dailystrips.sh, etc)
+(call it dailystrips, for example)
 
 #!/bin/sh
 echo "dailystrips running:"
