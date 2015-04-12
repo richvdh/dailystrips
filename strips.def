@@ -5349,3 +5349,14 @@ strip goose
         provides latest
 end
 
+# added rav 20110628
+strip dinosaurcomics
+        name Dinosaur Comics
+        homepage http://www.qwantz.com/
+        type search
+        baseurl http://www.qwantz.com/
+        searchpage http://www.qwantz.com/index.php
+        searchpattern <img src="http://www.qwantz.com(/comics/.+?\.(png|jpg))" [^>]*? title="(.+?)"
+        titlematchpart 3
+        provides latest
+end
