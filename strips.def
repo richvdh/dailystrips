@@ -5095,7 +5095,8 @@ strip xkcd
         type search
         baseurl http://imgs.xkcd.com
         searchpage http://xkcd.com/
-        searchpattern <img src="http://imgs.xkcd.com(/comics/.+?\.(png|jpg))"
+        searchpattern <img src="(http:)?//imgs.xkcd.com(/comics/.+?)" title="(.+?)"
+        titlematchpart 3
         provides latest
 end
 
@@ -5342,7 +5343,8 @@ strip goose
         artist Eugene So
         homepage http://abstrusegoose.com/
         type search
-        searchpattern <img.+?src="http://abstrusegoose.com/strips/(.+?\.PNG)"
+        searchpattern <img [^>]*? src="http://abstrusegoose.com(/strips/.+?\.(png|jpg))" [^>]*? title="(.+?)"
+        titlematchpart 3
         baseurl http://abstrusegoose.com/strips/
         provides latest
 end
