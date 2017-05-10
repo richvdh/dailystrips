@@ -1,4 +1,4 @@
-# Last update: Wed, 28 May 2014 13:28:53 +0200
+# Last update: Sub Tra 25 09:02:36 UTC 2015
 
 group andrews
 	desc Andrew's Favorite Strips
@@ -374,16 +374,17 @@ strip pvpcurrent
 	homepage http://www.pvponline.com/comic/
 	type search
 	searchpage $homepage
-	searchpattern <img.+?src="(http://.*amazonaws\.com/pvponlinenew/img/comic/\d{4}/\d{2}/pvp\d{8}.(gif|jpg|png))"
+	searchpattern <img.+?src="(http://.*amazonaws\.com/pvponlinenew/img/comic/\d{4}/\d{2}/pvp\d{8}\.(gif|jpg|png))"
 	provides latest
 end
 
 strip redmeat
 	name Redmeat
     artist Max Cannon
-	homepage http://www.redmeat.com/redmeat/current/
-	type generate
-	imageurl http://www.redmeat.com/redmeat/current/index-1.gif
+	homepage http://www.redmeat.com/
+	type search
+    searchpage http://www.redmeat.com/max-cannon/FreshMeat
+    searchpattern rel="image_src".+?href="(http://www\.redmeat\.com/imager/\S+/RM-\d{4}-\d{2}-\d{2}\.png)"
 	provides latest
 end
 
@@ -395,16 +396,17 @@ strip rudypark
 	provides latest
 end
 
-strip sinfest
-	name Sinfest
-	homepage http://sinfest.net/
-    artist Tatsuya Ishida
-	type search
-    searchpage $homepage
-    searchpattern <img.+?src="(btphp/comics/\d{4}-\d{2}-\d{2}\.gif)"
-	baseurl $homepage
-	provides latest
-end
+# cookies only
+#strip sinfest
+#	name Sinfest
+#	homepage http://sinfest.net/
+#   artist Tatsuya Ishida
+#	type search
+#   searchpage $homepage
+#   searchpattern <img.+?src="(btphp/comics/\S+\.gif)"
+#	baseurl $homepage
+#	provides latest
+#end
 
 strip sluggy
 	name Sluggy Freelance
@@ -666,7 +668,7 @@ strip littlegamers
 	homepage http://www.little-gamers.com/
     artist Christian Fundin and Pontus Madsen
 	type search
-    searchpattern <img.+?src="(http://\S+/comics/\d{4}-\d{2}-\d{2}.(jpg|gif))"
+    searchpattern <img.+?src="(http://little-gamers\.com/comics/\d{4}-\d{2}-\d{2}-\S+.(jpg|gif))"
 	provides latest
 end
 
@@ -4080,7 +4082,7 @@ strip ctrlaltdel
 	type search
     homepage http://www.cad-comic.com/cad/
     searchpage $homepage
-    searchpattern <img.+?src="(http://\S+\.cdn\.cad-comic\.com/comics/cad-\d{8}-\S+\.(gif|jpg|png))"
+    searchpattern <img.+?src="(http://cdn\S+\.cad-comic\.com/comics/cad-\d{8}-\S+\.(gif|jpg|png))"
 	provides latest
 end
 
@@ -4090,7 +4092,7 @@ strip ctrlaltdelsillies
 	type search
     homepage http://www.cad-comic.com/sillies/
     searchpage $homepage
-    searchpattern <img.+?src="(http://\S+\.cdn\.cad-comic\.com/comics/sillies-\d{8}-\S+\.(gif|jpg|png))"
+    searchpattern <img.+?src="(http://cdn\S+\.cad-comic\.com/comics/sillies-\d{8}-\S+\.(gif|jpg|png))"
 	provides latest
 end
 
@@ -5128,8 +5130,8 @@ strip xkcd
     homepage http://www.xkcd.com/
     artist Randall Munroe
     type search
-    searchpattern <img.+?src="((http:)?//imgs\.xkcd\.com/comics/\S+\.(png|jpg))" title="(.+?)"
-    titlematchpart 4
+    searchpattern <img.+?src="//(imgs\.xkcd\.com/comics/\S+\.(png|jpg))" title="(.+?)"
+    titlematchpart 3
     searchpage $homepage
     provides latest
 end
@@ -5160,23 +5162,23 @@ strip forbettercurrent
 	provides latest
 end
 
-strip phd
-	name PhD
-	artist Jorge Cham
-	homepage http://www.phdcomics.com/comics.php
-	type search
-	searchpattern <img.+?src=(http://www\.phdcomics\.com/comics/archive/phd\S+.(gif|png|jpg))
-    searchpage $homepage
-	provides latest
-end
+# needs cookies
+#strip phd
+#	name PhD
+#	artist Jorge Cham
+#	homepage http://www.phdcomics.com/comics.php
+#	type search
+#	searchpattern <img.+?src=(http://www\.phdcomics\.com/comics/archive/phd\S+\.(gif|png|jpg))
+#   searchpage $homepage
+#	provides latest
+#end
 
 strip cyanideandhappiness
     name Cyanide and Happiness
     artist Kris Wilson, Rob DenBleyker, Matt Melvin, Dave McElfatrick
     homepage http://www.explosm.net/
     type search
-    searchpattern <img.+?src="(http://www\.explosm\.net/db/files/Comics/\S+\.png)"
-    searchpage http://www.explosm.net/comics/new/
+    searchpattern <img.+?src="//(files\.explosm\.net/comics/\S+\.png)"
     provides latest
 end
 
@@ -5193,9 +5195,9 @@ end
 strip mediumlarge
     name Medium Large
     artist Francesco Marciuliano
-    homepage http://mediumlarge.wordpress.com/
+    homepage https://mediumlarge.wordpress.com/
     type search
-    searchpattern <img.+?src="(http://mediumlarge\.files\.wordpress.com/\d{4}/\d{2}/\S+\.(gif|jpg))\S+"
+    searchpattern <img.+?src="(https://mediumlarge\.files\.wordpress.com/\d{4}/\d{2}/\S+\.(gif|jpg))\S+"
     searchpage $homepage
     provides latest
 end
@@ -5246,7 +5248,7 @@ strip smbc
     artist Zach Weiner
     homepage http://www.smbc-comics.com/
     type search
-    searchpattern <img.+?src='(http://www\.smbc-comics\.com/comics/\d+\.png)'
+    searchpattern <img.+?src='(http://smbc-comics.com/comics/\S+\.png)'
     searchpage $homepage
     provides latest
 end
@@ -5428,7 +5430,7 @@ strip phdcomics
 	homepage http://www.phdcomics.com/
 	type search
 	searchpage http://www.phdcomics.com/comics.php
-	searchpattern <img.+?src=http://www.phdcomics.com(/comics/archive/\S+\.\w{3})
+	searchpattern <img.+?src=(http://www.phdcomics.com/comics/archive/\S+\.gif)
 	baseurl $homepage
 	provides latest
 end
@@ -5502,4 +5504,13 @@ strip accordingtodevin
 	artist Devin
 	useclass tumblr
 	$1 accordingtodevin
+end
+
+strip commitstrip
+    name CommitStrip
+    artist Etienne Issartial & Thomas Guenoux
+    homepage http://www.commitstrip.com/en/
+    type search
+    searchpattern <img.+?src="(http://www\.commitstrip\.com/wp-content/uploads/\d{4}/\d{2}/\S+\.jpg)"
+    provides latest
 end
