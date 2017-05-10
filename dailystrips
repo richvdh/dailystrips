@@ -569,7 +569,7 @@ for (@strips) {
 	# my ($strip, $name, $homepage, $img_addr, $referer, $prefetch, $artist) = split(/;/, $_);
 	my ($strip, $name, $homepage, $img_addr, $referer, $prefetch, $artist, $title) = @{$_};
 	my ($img_line, $local_name, $local_name_dir, $local_name_file, $local_name_ext, $image, $ext,
-	   $local_name_yesterday, $local_name_yesterday_dir, $local_name_yesterday_file, $local_name_yesterday_ext);
+	   $local_name_yesterday);
 	
 	if ($options{'verbose'} and $options{'local'}) {
 		warn "Downloading strip file for " . lc((split(/;/, $_))[0]) . "\n";
@@ -590,9 +590,6 @@ for (@strips) {
 			# prepare file names
 			if ($options{'stripdir'}) {
  				$local_name_yesterday = "$name/$short_date_yesterday$ext";
- 				$local_name_yesterday_dir = "$name/";
- 				$local_name_yesterday_file = $short_date_yesterday;
- 				$local_name_yesterday_ext = $ext;
  				
  				$local_name = "$name/$short_date$ext";
  				$local_name_dir = "$name/";
@@ -600,9 +597,6 @@ for (@strips) {
  				$local_name_ext = "$ext";
  			} elsif ($options{'dailydir'}) {
 				$local_name_yesterday = "$short_date_yesterday/$name-$short_date_yesterday$ext";
-				$local_name_yesterday_dir = "$short_date_yesterday/";	
-				$local_name_yesterday_file = "$name-$short_date_yesterday";
-				$local_name_yesterday_ext = "$ext";
 				
 				$local_name = "$short_date/$name-$short_date$ext";
 				$local_name_dir = "$short_date/";
@@ -610,9 +604,6 @@ for (@strips) {
 				$local_name_ext = "$ext";
 			} else {
 				$local_name_yesterday = "$name-$short_date_yesterday$ext";				
-				$local_name_yesterday_dir = "./";
-				$local_name_yesterday_file = "$name-$short_date_yesterday";
-				$local_name_yesterday_ext = "$ext";
 				
 				$local_name = "$name-$short_date$ext";
 				$local_name_dir = "./";
@@ -625,8 +616,6 @@ for (@strips) {
 				# used --nospaces or not, but this should work more
 				# often
 				$local_name_yesterday =~ s/\s+//g;
-				$local_name_yesterday_dir =~ s/\s+//g;
-				$local_name_yesterday_file =~ s/\s+//g;
 				
 				$local_name =~ s/\s+//g;
 				$local_name_dir =~ s/\s+//g;
