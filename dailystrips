@@ -26,7 +26,7 @@ use File::Copy;
 # Variables
 my (%options, $version, $time_today, @localtime_today, @localtime_yesterday, @localtime_tomorrow, $long_date, $short_date,
     $short_date_yesterday, $short_date_tomorrow, @get, @strips, %defs, $known_strips, %groups, $known_groups, %classes, $val,
-    $link_tomorrow, $no_dateparse, @base_dirparts);
+    $link_yesterday, $link_tomorrow, $no_dateparse, @base_dirparts);
 
 $version = "1.0.30";
 
@@ -366,6 +366,14 @@ if ($options{'local'}) {
 	}
 }
 
+my $prev_file = "dailystrips-$short_date_yesterday.html";
+if (! -e $prev_file) {
+	if ($options{'verbose'}) {
+		warn "Warning couldn't find previous day's file $prev_file\n",
+	}
+	$prev_file = undef;
+}
+
 if ($options{'local'} || $options{'localhtml'}) {
 	unless(open(STDOUT, ">dailystrips-$short_date.html")) {
 		die "Error: could not open HTML file (dailystrips-$short_date.html) for writing\n";
@@ -432,7 +440,9 @@ if ($options{'local'} || $options{'localhtml'}) {
 	}
 	
 	# Update previous day's file with a "Next Day" link to today's file
-	if (open(PREVIOUS, "<dailystrips-$short_date_yesterday.html")) {
+	if (!$prev_file) {
+		# nothing
+	} elsif (open(PREVIOUS, "<", $prev_file)) {
 		my @previous_page = <PREVIOUS>;
 		close(PREVIOUS);
 	
@@ -441,17 +451,17 @@ if ($options{'local'} || $options{'localhtml'}) {
 			my $match_count;
 
 			for (@previous_page) {
-				if (s/<!--nextday-->/ | <a href="dailystrips-$short_date.html">Next day<\/a>/) {
+				if (s/<!--nextday-->/<a href="dailystrips-$short_date.html">Next day<\/a>/) {
 					$match_count++;
 					last if ($match_count == 2);
 				}
 			}
 		
-			if (open(PREVIOUS, ">dailystrips-$short_date_yesterday.html")) {
+			if (open(PREVIOUS, ">", $prev_file)) {
 				print PREVIOUS @previous_page;
 				close(PREVIOUS);
 			} else {
-				 warn "Warning: could not open dailystrips-$short_date_yesterday.html for writing\n";
+				 warn "Warning: could not open $prev_file for writing\n";
 			}
 		} else {
 			warn "Warning: did not find any tag in previous day's file to make today's link\n";
@@ -492,8 +502,15 @@ unless ($options{'quiet'}) {
 	}
 }
 
+if ($prev_file) {
+	$link_yesterday = "<a href=\"$prev_file\">Previous day</a>";
+} else {
+	$link_yesterday = "<!--prevday-->";
+}
+
+
 if (-e "dailystrips-$short_date_tomorrow.html") {
-	$link_tomorrow = " | <a href=\"dailystrips-$short_date_tomorrow.html\">Next day</a>"
+	$link_tomorrow = "<a href=\"dailystrips-$short_date_tomorrow.html\">Next day</a>"
 } else {
 	$link_tomorrow = "<!--nextday-->"
 }
@@ -532,10 +549,10 @@ $topanchor
 </center>
 
 <p><font face=\"helvetica\">
-&lt; <a href=\"dailystrips-$short_date_yesterday.html\">Previous day</a>$link_tomorrow";
+&lt; $link_yesterday $link_tomorrow";
 	
 	if ($options{'archive'}) {
-		print " | <a href=\"archive.html\">Archives</a>";
+		print " <a href=\"archive.html\">Archives</a>";
 	}
 	
 	print
@@ -793,10 +810,10 @@ unless ($options{'lite'}) {
 "</table>
 
 <p><font face=\"helvetica\">
-&lt; <a href=\"dailystrips-$short_date_yesterday.html\">Previous day</a>$link_tomorrow";
+&lt; $link_yesterday $link_tomorrow";
 
 	if ($options{'archive'}) {
-		print " | <a href=\"archive.html\">Archives</a>";
+		print " <a href=\"archive.html\">Archives</a>";
 	}
 	
 	print
